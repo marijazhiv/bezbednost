@@ -1,0 +1,20 @@
+2024-06-09 10:13:45.880990+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "CONSTRAINT_F" already exists; SQL statement:
+         
+ALTER TABLE "PUBLIC"."CERTIFICATE_REQUEST" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_F" PRIMARY [90045-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:111)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:74)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.tools.RunScript.process(RunScript.java:255)
+	at org.h2.tools.RunScript.process(RunScript.java:186)
+	at org.h2.tools.RunScript.process(RunScript.java:313)
+	at org.h2.tools.RunScript.runTool(RunScript.java:139)
+	at org.h2.tools.RunScript.main(RunScript.java:66)
